@@ -13,12 +13,11 @@ final class MainTabBarController: UITabBarController {
     super.viewDidLoad()
 
     guard
-      let scheduleViewController = UIStoryboard(name: "StudentSchedule", bundle: .main).instantiateInitialViewController(),
       let examsViewController = UIStoryboard(name: "ExamsSchedule", bundle: .main).instantiateInitialViewController()
     else {
       return
     }
-
+    let scheduleViewController = UINavigationController(rootViewController: StudentScheduleViewController())
     viewControllers = [scheduleViewController, examsViewController]
   }
 }

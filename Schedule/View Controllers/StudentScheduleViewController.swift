@@ -1,5 +1,5 @@
 //
-//  SStudentScheduleViewController.swift
+//  StudentScheduleViewController.swift
 //  Schedule
 //
 //  Created by Egor Molchanov on 27.05.2020.
@@ -10,57 +10,80 @@ import UIKit
 import EventKit
 import EventKitUI
 
-class SStudentScheduleViewController: UIViewController {
+class StudentScheduleViewController: UIViewController {
   struct SelectedClass {
     let day: SWeekDay
     let number: Int
   }
 
-  @IBOutlet weak var calendar: SCalendarView!
-  @IBOutlet weak var schedule: SScheduleView!
-  @IBOutlet weak var placeholder: SSchedulePlaceholderView!
-
-  @IBAction func setupUserButtonTapped(_ sender: UIBarButtonItem) {
-    performSegue(withIdentifier: "SetupFromStudentSegue", sender: self)
-  }
-
-  @IBAction func calendarExportButtonTapped(_ sender: UIBarButtonItem) {
-    switch SExportManager.shared.authStatus {
-    case .notDetermined:
-      SExportManager.shared.requestPermission { [unowned self] authorized, error in
-        if authorized {
-          DispatchQueue.main.async {
-            self.chooseCalendar()
-          }
-        }
-      }
-    case .authorized:
-      chooseCalendar()
-    case .denied:
-      let alert = UIAlertController(
-        title: "\(NSLocalizedString("no-perm", comment: ""))",
-        message: "\(NSLocalizedString("no-perm-msg", comment: ""))",
-        preferredStyle: .alert)
-      alert.addAction(UIAlertAction(title: "OK", style: .default))
-      present(alert, animated: true)
-    default: return
-    }
-  }
+  private lazy var calendar: SCalendarView = {
+    let view = SCalendarView()
+    view.translatesAutoresizingMaskIntoConstraints = false
+    return view
+  }()
+  private lazy var schedule: SScheduleView = {
+    let view = SScheduleView()
+    view.translatesAutoresizingMaskIntoConstraints = false
+    return view
+  }()
+  private lazy var placeholder: SSchedulePlaceholderView = {
+    let view = SSchedulePlaceholderView()
+    view.translatesAutoresizingMaskIntoConstraints = false
+    return view
+  }()
 
   private var lastSelectedClass: SelectedClass? = nil
   private lazy var calendarSelectionViewController = UINavigationController()
   private let scheduleSource = SScheduleData(for: .student)
 
-  deinit {
-    NotificationCenter.default.removeObserver(self)
+  override func loadView() {
+    view = UIView()
+
+    view.addSubview(calendar)
+    NSLayoutConstraint.activate([
+      calendar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      calendar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+      calendar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+      calendar.heightAnchor.constraint(equalToConstant: 92.0)
+    ])
+
+    view.addSubview(schedule)
+    NSLayoutConstraint.activate([
+      schedule.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      schedule.topAnchor.constraint(equalTo: calendar.bottomAnchor),
+      schedule.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+      schedule.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+    ])
+
+    view.addSubview(placeholder)
+    NSLayoutConstraint.activate([
+      placeholder.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      placeholder.topAnchor.constraint(equalTo: view.topAnchor),
+      placeholder.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+      placeholder.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+    ])
+
+    navigationItem.leftBarButtonItem = UIBarButtonItem(
+      image: UIImage(systemName: "calendar.badge.plus"),
+      style: .plain,
+      target: self,
+      action: #selector(calendarExportButtonTapped(_:)))
+    navigationItem.rightBarButtonItem = UIBarButtonItem(
+      image: UIImage(systemName: "gear"),
+      style: .plain,
+      target: self,
+      action: #selector(setupUserButtonTapped(_:)))
+
+    tabBarItem = UITabBarItem(
+      title: NSLocalizedString("student", comment: ""),
+      image: UIImage(systemName: "person.fill"),
+      tag: 0)
   }
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    NotificationCenter.default.addObserver(
-      self, selector: #selector(onModalDismiss(_:)),
-      name: Notification.Name("StudentSetupModalDismiss"), object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(onModalDismiss(_:)), name: Notification.Name("StudentSetupModalDismiss"), object: nil)
 
     scheduleSource.userId = SDefaults.studentId
     navigationItem.title = SDefaults.studentName
@@ -126,7 +149,38 @@ class SStudentScheduleViewController: UIViewController {
     }
   }
 
-  @objc private func onModalDismiss(_ notification: Notification) {
+  @objc
+  private func setupUserButtonTapped(_ sender: UIBarButtonItem) {
+    guard let viewController = UIStoryboard(name: "UserSetup", bundle: .main).instantiateInitialViewController() else { return }
+    present(viewController, animated: true)
+  }
+
+  @objc
+  private func calendarExportButtonTapped(_ sender: UIBarButtonItem) {
+    switch SExportManager.shared.authStatus {
+    case .notDetermined:
+      SExportManager.shared.requestPermission { [unowned self] authorized, error in
+        if authorized {
+          DispatchQueue.main.async {
+            self.chooseCalendar()
+          }
+        }
+      }
+    case .authorized:
+      chooseCalendar()
+    case .denied:
+      let alert = UIAlertController(
+        title: "\(NSLocalizedString("no-perm", comment: ""))",
+        message: "\(NSLocalizedString("no-perm-msg", comment: ""))",
+        preferredStyle: .alert)
+      alert.addAction(UIAlertAction(title: "OK", style: .default))
+      present(alert, animated: true)
+    default: return
+    }
+  }
+
+  @objc 
+  private func onModalDismiss(_ notification: Notification) {
     if let result = notification.userInfo {
       SDefaults.studentId = ((result as! [String : Any])["UserId"] as! Int)
       SDefaults.studentName = ((result as! [String : Any])["UserName"] as! String)
@@ -163,18 +217,19 @@ class SStudentScheduleViewController: UIViewController {
     present(calendarSelectionViewController, animated: true, completion: nil)
   }
 
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier ?? "" == "ClassDetailFromStudentSegue" {
-      guard let lastSelectedClass = lastSelectedClass else { return }
-      let classDetails = segue.destination as! SClassDetailsViewController
-      classDetails.classData = scheduleSource.classData(number: lastSelectedClass.number, on: lastSelectedClass.day)
-      classDetails.userKind = .student
-
+  private func openClassDetails() {
+    guard
+      let viewController = UIStoryboard(name: "AdditionalInfo", bundle: .main).instantiateInitialViewController() as? SClassDetailsViewController,
+      let lastSelectedClass = lastSelectedClass
+    else {
+      return
     }
+    viewController.classData = scheduleSource.classData(number: lastSelectedClass.number, on: lastSelectedClass.day)
+    viewController.userKind = .student
   }
 }
 
-extension SStudentScheduleViewController: UITableViewDataSource {
+extension StudentScheduleViewController: UITableViewDataSource {
   func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }
@@ -196,17 +251,17 @@ extension SStudentScheduleViewController: UITableViewDataSource {
   }
 }
 
-extension SStudentScheduleViewController: UITableViewDelegate {
+extension StudentScheduleViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: false)
     lastSelectedClass = SelectedClass(
       day: SWeekDay(rawValue: tableView.tag)!,
       number: indexPath.row)
-    performSegue(withIdentifier: "ClassDetailFromStudentSegue", sender: self)
+    openClassDetails()
   }
 }
 
-extension SStudentScheduleViewController: EKCalendarChooserDelegate {
+extension StudentScheduleViewController: EKCalendarChooserDelegate {
   func calendarChooserDidFinish(_ calendarChooser: EKCalendarChooser) {
     if let selectedCalendar = calendarChooser.selectedCalendars.first {
       do {

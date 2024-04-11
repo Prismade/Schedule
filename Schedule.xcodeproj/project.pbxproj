@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2416015F252912A70096EBDC /* AdditionalInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2416015D252912A70096EBDC /* AdditionalInfo.storyboard */; };
 		24160163252913080096EBDC /* ExamsSchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24160161252913080096EBDC /* ExamsSchedule.storyboard */; };
-		2416016B252913E00096EBDC /* StudentSchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24160169252913E00096EBDC /* StudentSchedule.storyboard */; };
 		2416016F2529147A0096EBDC /* UserSetup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2416016D2529147A0096EBDC /* UserSetup.storyboard */; };
 		2424F1CF244F958000C1D91C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424F1CE244F958000C1D91C /* AppDelegate.swift */; };
 		2424F1D1244F958000C1D91C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424F1D0244F958000C1D91C /* SceneDelegate.swift */; };
@@ -34,7 +33,7 @@
 		24567A6124788054004BAD60 /* SBuildingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24567A6024788054004BAD60 /* SBuildingsManager.swift */; };
 		24567A632478866B004BAD60 /* STeacherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24567A622478866B004BAD60 /* STeacherDetailsViewController.swift */; };
 		24567A652478889C004BAD60 /* SEmployeeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24567A642478889C004BAD60 /* SEmployeeManager.swift */; };
-		245E167B24536FE10078DAC4 /* SStudentScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245E167A24536FE10078DAC4 /* SStudentScheduleViewController.swift */; };
+		245E167B24536FE10078DAC4 /* StudentScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245E167A24536FE10078DAC4 /* StudentScheduleViewController.swift */; };
 		24612117292E230B009B2F6C /* UIColor+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24612116292E230B009B2F6C /* UIColor+Convenience.swift */; };
 		24661C7F247E7DBD001AE48C /* SCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24661C7E247E7DBD001AE48C /* SCacheManager.swift */; };
 		24661C81247EBECA001AE48C /* SExamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24661C80247EBEC9001AE48C /* SExamsTableViewController.swift */; };
@@ -65,12 +64,9 @@
 /* Begin PBXFileReference section */
 		2416015E252912A70096EBDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AdditionalInfo.storyboard; sourceTree = "<group>"; };
 		24160162252913080096EBDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ExamsSchedule.storyboard; sourceTree = "<group>"; };
-		2416016A252913E00096EBDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/StudentSchedule.storyboard; sourceTree = "<group>"; };
 		2416016E2529147A0096EBDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/UserSetup.storyboard; sourceTree = "<group>"; };
 		241601E6252923020096EBDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UserSetup.strings; sourceTree = "<group>"; };
 		241601E8252923310096EBDC /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/UserSetup.strings; sourceTree = "<group>"; };
-		241601EA252923C00096EBDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/StudentSchedule.strings; sourceTree = "<group>"; };
-		241601EC252923C20096EBDC /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/StudentSchedule.strings; sourceTree = "<group>"; };
 		241601F3252924730096EBDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ExamsSchedule.strings; sourceTree = "<group>"; };
 		241601F5252924A30096EBDC /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/ExamsSchedule.strings; sourceTree = "<group>"; };
 		241601F7252926CC0096EBDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AdditionalInfo.strings; sourceTree = "<group>"; };
@@ -99,7 +95,7 @@
 		24567A6024788054004BAD60 /* SBuildingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBuildingsManager.swift; sourceTree = "<group>"; };
 		24567A622478866B004BAD60 /* STeacherDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STeacherDetailsViewController.swift; sourceTree = "<group>"; };
 		24567A642478889C004BAD60 /* SEmployeeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SEmployeeManager.swift; sourceTree = "<group>"; };
-		245E167A24536FE10078DAC4 /* SStudentScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SStudentScheduleViewController.swift; sourceTree = "<group>"; };
+		245E167A24536FE10078DAC4 /* StudentScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentScheduleViewController.swift; sourceTree = "<group>"; };
 		24612116292E230B009B2F6C /* UIColor+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Convenience.swift"; sourceTree = "<group>"; };
 		24661C7E247E7DBD001AE48C /* SCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCacheManager.swift; sourceTree = "<group>"; };
 		24661C80247EBEC9001AE48C /* SExamsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SExamsTableViewController.swift; sourceTree = "<group>"; };
@@ -171,7 +167,6 @@
 				2424F1CE244F958000C1D91C /* AppDelegate.swift */,
 				2424F1D0244F958000C1D91C /* SceneDelegate.swift */,
 				2416016D2529147A0096EBDC /* UserSetup.storyboard */,
-				24160169252913E00096EBDC /* StudentSchedule.storyboard */,
 				24160161252913080096EBDC /* ExamsSchedule.storyboard */,
 				2416015D252912A70096EBDC /* AdditionalInfo.storyboard */,
 				2424F1D7244F958400C1D91C /* Assets.xcassets */,
@@ -186,7 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				245063632BC85371007CB6A6 /* MainTabBarController.swift */,
-				245E167A24536FE10078DAC4 /* SStudentScheduleViewController.swift */,
+				245E167A24536FE10078DAC4 /* StudentScheduleViewController.swift */,
 				24661C80247EBEC9001AE48C /* SExamsTableViewController.swift */,
 				24661C85247EC3D9001AE48C /* SSearchableTableViewController.swift */,
 				24661C88247EC3D9001AE48C /* SDivisionSelection.swift */,
@@ -344,7 +339,6 @@
 				24160163252913080096EBDC /* ExamsSchedule.storyboard in Resources */,
 				245063602BC84F24007CB6A6 /* Localizable.xcstrings in Resources */,
 				247C40ED2472E6670075EE9D /* SScheduleTableViewCell.xib in Resources */,
-				2416016B252913E00096EBDC /* StudentSchedule.storyboard in Resources */,
 				2424F1D8244F958400C1D91C /* Assets.xcassets in Resources */,
 				245063622BC851C5007CB6A6 /* InfoPlist.xcstrings in Resources */,
 			);
@@ -382,7 +376,7 @@
 				24661C81247EBECA001AE48C /* SExamsTableViewController.swift in Sources */,
 				24335EE6246491BD00801B2A /* SCacheItem.swift in Sources */,
 				24B8DDAF292424C900824EF2 /* Endpoint.swift in Sources */,
-				245E167B24536FE10078DAC4 /* SStudentScheduleViewController.swift in Sources */,
+				245E167B24536FE10078DAC4 /* StudentScheduleViewController.swift in Sources */,
 				2424F1D1244F958000C1D91C /* SceneDelegate.swift in Sources */,
 				24661C89247EC3D9001AE48C /* SGroupSelection.swift in Sources */,
 				247654E7246982E0003885D5 /* SScheduleData.swift in Sources */,
@@ -419,16 +413,6 @@
 				241601F5252924A30096EBDC /* ru */,
 			);
 			name = ExamsSchedule.storyboard;
-			sourceTree = "<group>";
-		};
-		24160169252913E00096EBDC /* StudentSchedule.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2416016A252913E00096EBDC /* Base */,
-				241601EA252923C00096EBDC /* en */,
-				241601EC252923C20096EBDC /* ru */,
-			);
-			name = StudentSchedule.storyboard;
 			sourceTree = "<group>";
 		};
 		2416016D2529147A0096EBDC /* UserSetup.storyboard */ = {

@@ -93,6 +93,7 @@ final class SCalendarView: UIView {
   }
 
   private func commonInit() {
+    backgroundColor = UIColor.navBar
     addSubview(view)
     view.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
