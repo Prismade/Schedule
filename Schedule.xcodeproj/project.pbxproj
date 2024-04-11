@@ -158,7 +158,9 @@
 				2424F1CC244F958000C1D91C /* Products */,
 				24A38BDB292A13FA00E1B304 /* Frameworks */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		2424F1CC244F958000C1D91C /* Products */ = {
 			isa = PBXGroup;

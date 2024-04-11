@@ -3,7 +3,7 @@
 //  Schedule
 //
 //  Created by Egor Molchanov on 12.12.2021.
-//  Copyright © 2022 Prismade. All rights reserved.
+//  Copyright © 2021 Egor and the fucked up. All rights reserved.
 //
 
 import Foundation

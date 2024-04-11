@@ -3,7 +3,7 @@
 //  Schedule
 //
 //  Created by Egor Molchanov on 12.12.2021.
-//  Copyright © 2022 Prismade. All rights reserved.
+//  Copyright © 2021 Egor and the fucked up. All rights reserved.
 //
 
 import Foundation
@@ -17,7 +17,7 @@ enum Oreluniver {
   case employee(identifier: Int)
   case buildings
   case other(path: String)
-  
+
   var methodString: String {
     switch self {
     case .divisions:
@@ -45,7 +45,7 @@ extension Oreluniver: Endpoint {
   static var baseUrl: URL? {
     URL(string: "https://oreluniver.ru")
   }
-  
+
   var fullUrl: URL? {
     URL(string: methodString, relativeTo: Oreluniver.baseUrl)
   }

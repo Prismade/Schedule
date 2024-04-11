@@ -1,18 +1,22 @@
+//
+//  SScheduleData.swift
+//  Schedule
+//
+//  Created by Egor Molchanov on 27.05.2020.
+//  Copyright © 2020 Egor and the fucked up. All rights reserved.
+//
+
 import Foundation
 import SwiftyJSON
 
 final class SScheduleData {
-  
   enum UserKind {
     case student
     case teacher
   }
-  
-  // MARK: - Public properties
-  
-  // delegate closure
+
   var didFinishDataUpdate: ((Error?) -> Void)?
-  
+
   var userKind: UserKind!
   var userId: Int?
   var schedule = [SScheduleDay]()
@@ -20,46 +24,42 @@ final class SScheduleData {
   var weekOffset: Int = 0 {
     didSet { updateData() }
   }
-  
-  // MARK: - Initialization
-  
+
   init(for userKind: UserKind) {
     self.userKind = userKind
   }
-  
-  // MARK: - Public Methods
-  
+
   func scheduleData(for day: SWeekDay) -> SScheduleDay? {
     guard day.rawValue <= schedule.count && day != .sunday else { return nil }
     return schedule[day.rawValue - 1]
   }
-  
+
   func numberOfClasses(on day: SWeekDay) -> Int {
     guard let schedule = scheduleData(for: day) else { return 0 }
     return schedule.classes.count
   }
-  
+
   func classData(number: Int, on day: SWeekDay) -> SClass? {
     guard let schedule = scheduleData(for: day) else { return nil }
     guard number <= schedule.classes.count && number >= 0 else { return nil }
     return schedule.classes[number]
   }
-  
+
   func updateData(force: Bool = false) {
     guard let id = userId else { return }
-    
+
     if force == false, let cachedSchedule = SCacheManager.shared.retrieveSchedule(weekOffset: weekOffset) {
       schedule = cachedSchedule
       didFinishDataUpdate?(nil)
       return
     }
-    
+
     Task {
       do {
         let data = try await NetworkWorker().data(from: Oreluniver.schedule(group: id, weeksFromNow: weekOffset))
         let jsonData = try? JSON(data: data)
         guard let json = jsonData else { return }
-        
+
         var newSchedule = [SClass]()
         for (key, _): (String, JSON) in json {
           if Int(key) != nil {
@@ -88,7 +88,7 @@ final class SScheduleData {
           }.sorted()
           return SScheduleDay(weekDay: SWeekDay(rawValue: weekDay)!, classes: classes)
         }
-        
+
         if weekOffset >= 0 {
           do {
             try SCacheManager.shared.cacheSchedule(
@@ -98,7 +98,7 @@ final class SScheduleData {
             print(error.localizedDescription)
           }
         }
-        
+
         await MainActor.run {
           didFinishDataUpdate?(nil)
         }
@@ -109,5 +109,4 @@ final class SScheduleData {
       }
     }
   }
-  
 }

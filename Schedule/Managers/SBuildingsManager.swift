@@ -1,21 +1,19 @@
+//
+//  SBuildingsManager.swift
+//  Schedule
+//
+//  Created by Egor Molchanov on 27.05.2020.
+//  Copyright © 2020 Egor and the fucked up. All rights reserved.
+//
+
 import Foundation
 
 final class SBuildingsManager {
-  
-  // MARK: - Static Properties
-  
   static let shared = SBuildingsManager()
-  
-  // MARK: - Private Properties
-  
   private var buildings = [SBuilding]()
-  
-  // MARK: Initialization
-  
+
   private init() {}
-  
-  // MARK: - Public Methods
-  
+
   func setCoordinates(for building: Int, completion: @escaping (Double?, Double?) -> Void) {
     if buildings.count == 0 {
       if let data = SCacheManager.shared.retrieveBuildings() {
