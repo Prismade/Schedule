@@ -1,5 +1,5 @@
 //
-//  SExamsTableViewController.swift
+//  ExamsTableViewController.swift
 //  Schedule
 //
 //  Created by Egor Molchanov on 27.05.2020.
@@ -8,16 +8,20 @@
 
 import UIKit
 
-class SExamsTableViewController: UITableViewController {
+final class ExamsTableViewController: UITableViewController {
   private var examsData = [SExam]()
   private var firstSetupFinished = false
   private let reuseIdentifier = "ExamTableCell"
 
+  override func loadView() {
+    super.loadView()
+    title = NSLocalizedString("exams", comment: "")
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    tableView.register(UINib(nibName: "SScheduleTableViewCell", bundle: nil),
-                       forCellReuseIdentifier: reuseIdentifier)
+    tableView.register(UINib(nibName: "SScheduleTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
     refreshControl = UIRefreshControl()
     refreshControl?.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
   }
@@ -64,9 +68,7 @@ class SExamsTableViewController: UITableViewController {
   }
 
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(
-      withIdentifier: reuseIdentifier,
-      for: indexPath) as! SScheduleTableViewCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! SScheduleTableViewCell
 
     let data = examsData[indexPath.row]
     cell.configure(with: data)

@@ -85,6 +85,22 @@
         }
       }
     },
+    "exams" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exams"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Экзамены"
+          }
+        }
+      }
+    },
     "for-all" : {
       "extractionState" : "manual",
       "localizations" : {

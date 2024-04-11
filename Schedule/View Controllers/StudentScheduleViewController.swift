@@ -10,7 +10,7 @@ import UIKit
 import EventKit
 import EventKitUI
 
-class StudentScheduleViewController: UIViewController {
+final class StudentScheduleViewController: UIViewController {
   struct SelectedClass {
     let day: SWeekDay
     let number: Int
@@ -73,11 +73,6 @@ class StudentScheduleViewController: UIViewController {
       style: .plain,
       target: self,
       action: #selector(setupUserButtonTapped(_:)))
-
-    tabBarItem = UITabBarItem(
-      title: NSLocalizedString("student", comment: ""),
-      image: UIImage(systemName: "person.fill"),
-      tag: 0)
   }
 
   override func viewDidLoad() {
