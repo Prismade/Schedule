@@ -309,7 +309,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1200;
-				ORGANIZATIONNAME = Prismade;
+				ORGANIZATIONNAME = "Egor and the fucked up";
 				TargetAttributes = {
 					2424F1CA244F958000C1D91C = {
 						CreatedOnToolsVersion = 11.4.1;
@@ -628,14 +628,19 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MZN9WUBPNG;
 				INFOPLIST_FILE = Schedule/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ru.prismade.Schedule;
+				PRODUCT_BUNDLE_IDENTIFIER = net.prismade.Schedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -648,14 +653,19 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MZN9WUBPNG;
 				INFOPLIST_FILE = Schedule/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ru.prismade.Schedule;
+				PRODUCT_BUNDLE_IDENTIFIER = net.prismade.Schedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
