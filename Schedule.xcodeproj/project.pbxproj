@@ -13,7 +13,6 @@
 		2416016F2529147A0096EBDC /* UserSetup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2416016D2529147A0096EBDC /* UserSetup.storyboard */; };
 		2424F1CF244F958000C1D91C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424F1CE244F958000C1D91C /* AppDelegate.swift */; };
 		2424F1D1244F958000C1D91C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424F1D0244F958000C1D91C /* SceneDelegate.swift */; };
-		2424F1D6244F958000C1D91C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2424F1D4244F958000C1D91C /* Main.storyboard */; };
 		2424F1D8244F958400C1D91C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2424F1D7244F958400C1D91C /* Assets.xcassets */; };
 		2424F1DB244F958400C1D91C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2424F1D9244F958400C1D91C /* LaunchScreen.storyboard */; };
 		2424F229244F9A6400C1D91C /* SCopyableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424F228244F9A6400C1D91C /* SCopyableLabel.swift */; };
@@ -31,6 +30,7 @@
 		243B61BA245B71E900FD7455 /* SCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B61B9245B71E900FD7455 /* SCalendarView.swift */; };
 		245063602BC84F24007CB6A6 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 2450635F2BC84F24007CB6A6 /* Localizable.xcstrings */; };
 		245063622BC851C5007CB6A6 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 245063612BC851C5007CB6A6 /* InfoPlist.xcstrings */; };
+		245063642BC85371007CB6A6 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245063632BC85371007CB6A6 /* MainTabBarController.swift */; };
 		24567A5F24787EDB004BAD60 /* SClassDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24567A5E24787EDB004BAD60 /* SClassDetailsViewController.swift */; };
 		24567A6124788054004BAD60 /* SBuildingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24567A6024788054004BAD60 /* SBuildingsManager.swift */; };
 		24567A632478866B004BAD60 /* STeacherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24567A622478866B004BAD60 /* STeacherDetailsViewController.swift */; };
@@ -68,8 +68,6 @@
 		24160162252913080096EBDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ExamsSchedule.storyboard; sourceTree = "<group>"; };
 		2416016A252913E00096EBDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/StudentSchedule.storyboard; sourceTree = "<group>"; };
 		2416016E2529147A0096EBDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/UserSetup.storyboard; sourceTree = "<group>"; };
-		241601E1252922CB0096EBDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		241601E3252922CC0096EBDC /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		241601E6252923020096EBDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UserSetup.strings; sourceTree = "<group>"; };
 		241601E8252923310096EBDC /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/UserSetup.strings; sourceTree = "<group>"; };
 		241601EA252923C00096EBDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/StudentSchedule.strings; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 		2424F1CB244F958000C1D91C /* Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2424F1CE244F958000C1D91C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2424F1D0244F958000C1D91C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2424F1D5244F958000C1D91C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2424F1D7244F958400C1D91C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2424F1DA244F958400C1D91C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2424F228244F9A6400C1D91C /* SCopyableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCopyableLabel.swift; sourceTree = "<group>"; };
@@ -99,6 +96,7 @@
 		243B61B9245B71E900FD7455 /* SCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCalendarView.swift; sourceTree = "<group>"; };
 		2450635F2BC84F24007CB6A6 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		245063612BC851C5007CB6A6 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		245063632BC85371007CB6A6 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		24567A5E24787EDB004BAD60 /* SClassDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SClassDetailsViewController.swift; sourceTree = "<group>"; };
 		24567A6024788054004BAD60 /* SBuildingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBuildingsManager.swift; sourceTree = "<group>"; };
 		24567A622478866B004BAD60 /* STeacherDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STeacherDetailsViewController.swift; sourceTree = "<group>"; };
@@ -174,7 +172,6 @@
 				24612115292E22F9009B2F6C /* Utils */,
 				2424F1CE244F958000C1D91C /* AppDelegate.swift */,
 				2424F1D0244F958000C1D91C /* SceneDelegate.swift */,
-				2424F1D4244F958000C1D91C /* Main.storyboard */,
 				2416016D2529147A0096EBDC /* UserSetup.storyboard */,
 				24160169252913E00096EBDC /* StudentSchedule.storyboard */,
 				24160161252913080096EBDC /* ExamsSchedule.storyboard */,
@@ -191,6 +188,7 @@
 		2424F1E4244F979A00C1D91C /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				245063632BC85371007CB6A6 /* MainTabBarController.swift */,
 				245E167A24536FE10078DAC4 /* SStudentScheduleViewController.swift */,
 				24661C80247EBEC9001AE48C /* SExamsTableViewController.swift */,
 				24661C85247EC3D9001AE48C /* SSearchableTableViewController.swift */,
@@ -353,7 +351,6 @@
 				2416016B252913E00096EBDC /* StudentSchedule.storyboard in Resources */,
 				2424F1D8244F958400C1D91C /* Assets.xcassets in Resources */,
 				245063622BC851C5007CB6A6 /* InfoPlist.xcstrings in Resources */,
-				2424F1D6244F958000C1D91C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +393,7 @@
 				24B8DDB12924252B00824EF2 /* OreluniverEndpoint.swift in Sources */,
 				24612117292E230B009B2F6C /* UIColor+Convenience.swift in Sources */,
 				24BF4B5A245B378A0048D6A5 /* SDayView.swift in Sources */,
+				245063642BC85371007CB6A6 /* MainTabBarController.swift in Sources */,
 				243B61BA245B71E900FD7455 /* SCalendarView.swift in Sources */,
 				2466640524607B740043BA4C /* SScheduleView.swift in Sources */,
 				24335EE8246491BD00801B2A /* SEmployee.swift in Sources */,
@@ -445,16 +443,6 @@
 				241601E8252923310096EBDC /* ru */,
 			);
 			name = UserSetup.storyboard;
-			sourceTree = "<group>";
-		};
-		2424F1D4244F958000C1D91C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2424F1D5244F958000C1D91C /* Base */,
-				241601E1252922CB0096EBDC /* en */,
-				241601E3252922CC0096EBDC /* ru */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		2424F1D9244F958400C1D91C /* LaunchScreen.storyboard */ = {
@@ -604,6 +592,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MZN9WUBPNG;
 				INFOPLIST_FILE = Schedule/Info.plist;
@@ -630,6 +619,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MZN9WUBPNG;
 				INFOPLIST_FILE = Schedule/Info.plist;
