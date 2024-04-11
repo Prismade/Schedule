@@ -14,7 +14,7 @@ import UIKit
  */
 class SSearchableTableViewController: UITableViewController, UISearchBarDelegate, UISearchResultsUpdating {
   let searchController = UISearchController(searchResultsController: nil)
-  let searchBarPlaceholder = "\(NSLocalizedString("searchPlaceholder", comment: ""))"
+  let searchBarPlaceholder = "\(NSLocalizedString("search-placeholder", comment: ""))"
   var reuseIdentifier = "SearchableTableCell"
   var isSearchBarEmpty: Bool {
     return searchController.searchBar.text?.isEmpty ?? true

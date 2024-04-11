@@ -38,8 +38,8 @@ class SStudentScheduleViewController: UIViewController {
       chooseCalendar()
     case .denied:
       let alert = UIAlertController(
-        title: "\(NSLocalizedString("noPerm", comment: ""))",
-        message: "\(NSLocalizedString("noPermMsg", comment: ""))",
+        title: "\(NSLocalizedString("no-perm", comment: ""))",
+        message: "\(NSLocalizedString("no-perm-msg", comment: ""))",
         preferredStyle: .alert)
       alert.addAction(UIAlertAction(title: "OK", style: .default))
       present(alert, animated: true)
@@ -106,7 +106,7 @@ class SStudentScheduleViewController: UIViewController {
     schedule.tableViewDataSource = self
     schedule.tableViewDelegate = self
 
-    placeholder.message = NSLocalizedString("NeedGroup", comment: "")
+    placeholder.message = NSLocalizedString("need-group", comment: "")
     if SDefaults.studentId != nil {
       placeholder.isHidden = true
       updateSchedule()

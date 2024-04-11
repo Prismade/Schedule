@@ -17,7 +17,6 @@
 		2424F1D8244F958400C1D91C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2424F1D7244F958400C1D91C /* Assets.xcassets */; };
 		2424F1DB244F958400C1D91C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2424F1D9244F958400C1D91C /* LaunchScreen.storyboard */; };
 		2424F229244F9A6400C1D91C /* SCopyableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424F228244F9A6400C1D91C /* SCopyableLabel.swift */; };
-		2424F22F244F9EBB00C1D91C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2424F231244F9EBB00C1D91C /* Localizable.strings */; };
 		24335EE4246491BD00801B2A /* SBuildingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24335EDA246491BD00801B2A /* SBuildingData.swift */; };
 		24335EE5246491BD00801B2A /* SCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24335EDB246491BD00801B2A /* SCourse.swift */; };
 		24335EE6246491BD00801B2A /* SCacheItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24335EDC246491BD00801B2A /* SCacheItem.swift */; };
@@ -30,6 +29,8 @@
 		243B61B4245B581000FD7455 /* SWeekView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243B61B3245B581000FD7455 /* SWeekView.xib */; };
 		243B61B6245B599200FD7455 /* SWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B61B5245B599200FD7455 /* SWeekView.swift */; };
 		243B61BA245B71E900FD7455 /* SCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B61B9245B71E900FD7455 /* SCalendarView.swift */; };
+		245063602BC84F24007CB6A6 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 2450635F2BC84F24007CB6A6 /* Localizable.xcstrings */; };
+		245063622BC851C5007CB6A6 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 245063612BC851C5007CB6A6 /* InfoPlist.xcstrings */; };
 		24567A5F24787EDB004BAD60 /* SClassDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24567A5E24787EDB004BAD60 /* SClassDetailsViewController.swift */; };
 		24567A6124788054004BAD60 /* SBuildingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24567A6024788054004BAD60 /* SBuildingsManager.swift */; };
 		24567A632478866B004BAD60 /* STeacherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24567A622478866B004BAD60 /* STeacherDetailsViewController.swift */; };
@@ -43,7 +44,6 @@
 		24661C8A247EC3D9001AE48C /* SSearchableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24661C85247EC3D9001AE48C /* SSearchableTableViewController.swift */; };
 		24661C8D247EC3D9001AE48C /* SDivisionSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24661C88247EC3D9001AE48C /* SDivisionSelection.swift */; };
 		24661C8F2481271E001AE48C /* SExportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24661C8E2481271E001AE48C /* SExportManager.swift */; };
-		24661C962481400C001AE48C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24661C982481400C001AE48C /* InfoPlist.strings */; };
 		246663FD246073D30043BA4C /* SCalendarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 246663FF246073D30043BA4C /* SCalendarView.xib */; };
 		2466640524607B740043BA4C /* SScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466640424607B740043BA4C /* SScheduleView.swift */; };
 		2466640724607B840043BA4C /* SScheduleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2466640624607B840043BA4C /* SScheduleView.xib */; };
@@ -85,8 +85,6 @@
 		2424F1D7244F958400C1D91C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2424F1DA244F958400C1D91C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2424F228244F9A6400C1D91C /* SCopyableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCopyableLabel.swift; sourceTree = "<group>"; };
-		2424F230244F9EBB00C1D91C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		2424F232244F9EC000C1D91C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		24335EDA246491BD00801B2A /* SBuildingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBuildingData.swift; sourceTree = "<group>"; };
 		24335EDB246491BD00801B2A /* SCourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCourse.swift; sourceTree = "<group>"; };
 		24335EDC246491BD00801B2A /* SCacheItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCacheItem.swift; sourceTree = "<group>"; };
@@ -99,6 +97,8 @@
 		243B61B3245B581000FD7455 /* SWeekView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SWeekView.xib; sourceTree = "<group>"; };
 		243B61B5245B599200FD7455 /* SWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWeekView.swift; sourceTree = "<group>"; };
 		243B61B9245B71E900FD7455 /* SCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCalendarView.swift; sourceTree = "<group>"; };
+		2450635F2BC84F24007CB6A6 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		245063612BC851C5007CB6A6 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		24567A5E24787EDB004BAD60 /* SClassDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SClassDetailsViewController.swift; sourceTree = "<group>"; };
 		24567A6024788054004BAD60 /* SBuildingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBuildingsManager.swift; sourceTree = "<group>"; };
 		24567A622478866B004BAD60 /* STeacherDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STeacherDetailsViewController.swift; sourceTree = "<group>"; };
@@ -112,8 +112,6 @@
 		24661C85247EC3D9001AE48C /* SSearchableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSearchableTableViewController.swift; sourceTree = "<group>"; };
 		24661C88247EC3D9001AE48C /* SDivisionSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDivisionSelection.swift; sourceTree = "<group>"; };
 		24661C8E2481271E001AE48C /* SExportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SExportManager.swift; sourceTree = "<group>"; };
-		24661C972481400C001AE48C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		24661C992481400D001AE48C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		24661CA024814357001AE48C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		246663FE246073D30043BA4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SCalendarView.xib; sourceTree = "<group>"; };
 		24666401246073D80043BA4C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SCalendarView.strings; sourceTree = "<group>"; };
@@ -183,9 +181,9 @@
 				2416015D252912A70096EBDC /* AdditionalInfo.storyboard */,
 				2424F1D9244F958400C1D91C /* LaunchScreen.storyboard */,
 				2424F1D7244F958400C1D91C /* Assets.xcassets */,
+				245063612BC851C5007CB6A6 /* InfoPlist.xcstrings */,
+				2450635F2BC84F24007CB6A6 /* Localizable.xcstrings */,
 				24661CA024814357001AE48C /* Info.plist */,
-				24661C982481400C001AE48C /* InfoPlist.strings */,
-				2424F231244F9EBB00C1D91C /* Localizable.strings */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -342,7 +340,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2466640724607B840043BA4C /* SScheduleView.xib in Resources */,
-				24661C962481400C001AE48C /* InfoPlist.strings in Resources */,
 				243B61B4245B581000FD7455 /* SWeekView.xib in Resources */,
 				24BF4B58245B35BE0048D6A5 /* SDayView.xib in Resources */,
 				246663FD246073D30043BA4C /* SCalendarView.xib in Resources */,
@@ -351,10 +348,11 @@
 				2424F1DB244F958400C1D91C /* LaunchScreen.storyboard in Resources */,
 				2416015F252912A70096EBDC /* AdditionalInfo.storyboard in Resources */,
 				24160163252913080096EBDC /* ExamsSchedule.storyboard in Resources */,
+				245063602BC84F24007CB6A6 /* Localizable.xcstrings in Resources */,
 				247C40ED2472E6670075EE9D /* SScheduleTableViewCell.xib in Resources */,
 				2416016B252913E00096EBDC /* StudentSchedule.storyboard in Resources */,
-				2424F22F244F9EBB00C1D91C /* Localizable.strings in Resources */,
 				2424F1D8244F958400C1D91C /* Assets.xcassets in Resources */,
+				245063622BC851C5007CB6A6 /* InfoPlist.xcstrings in Resources */,
 				2424F1D6244F958000C1D91C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,24 +463,6 @@
 				2424F1DA244F958400C1D91C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		2424F231244F9EBB00C1D91C /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2424F230244F9EBB00C1D91C /* en */,
-				2424F232244F9EC000C1D91C /* ru */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		24661C982481400C001AE48C /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				24661C972481400C001AE48C /* en */,
-				24661C992481400D001AE48C /* ru */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		246663FF246073D30043BA4C /* SCalendarView.xib */ = {
@@ -640,6 +620,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -665,6 +646,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

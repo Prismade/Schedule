@@ -31,7 +31,7 @@ final class SScheduleTableViewCell: UITableViewCell {
     classTitle.text = classData.subject
     if classData.subgroup != 0 {
       subgroup.isHidden = false
-      subgroup.text = "\(NSLocalizedString("Subgroup", comment: "")) \(classData.subgroup)"
+      subgroup.text = "\(NSLocalizedString("subgroup", comment: "")) \(classData.subgroup)"
     } else {
       subgroup.isHidden = true
     }

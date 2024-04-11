@@ -82,14 +82,14 @@ class STeacherDetailsViewController: UIViewController {
                           UIFont.systemFont(ofSize: 17, weight: .light)]
 
     let positionText = NSMutableAttributedString(
-      string: "\(NSLocalizedString("Position", comment: ""))",
+      string: "\(NSLocalizedString("position", comment: ""))",
       attributes: boldFontAttribute)
     positionText.append(NSAttributedString(string: employee!.allPositions, attributes: fontAttribute))
     position.attributedText = positionText
 
     if let degree = employee!.degree {
       let degreeText = NSMutableAttributedString(
-        string: "\(NSLocalizedString("Degree", comment: ""))",
+        string: "\(NSLocalizedString("degree", comment: ""))",
         attributes: boldFontAttribute)
       degreeText.append(NSAttributedString(string: degree, attributes: fontAttribute))
       self.degree.attributedText = degreeText
@@ -99,7 +99,7 @@ class STeacherDetailsViewController: UIViewController {
 
     if let rank = employee!.rank {
       let rankText = NSMutableAttributedString(
-        string: "\(NSLocalizedString("Rank", comment: ""))",
+        string: "\(NSLocalizedString("rank", comment: ""))",
         attributes: boldFontAttribute)
       rankText.append(NSAttributedString(string: rank, attributes: fontAttribute))
       self.rank.attributedText = rankText
@@ -112,7 +112,7 @@ class STeacherDetailsViewController: UIViewController {
         employee!.contacts.email != nil ||
         employee!.contacts.phone != nil
     else {
-      self.address.text = "\(NSLocalizedString("NoContacts", comment: ""))"
+      self.address.text = "\(NSLocalizedString("no-contacts", comment: ""))"
       self.phone.isHidden = true
       self.email.isHidden = true
       stackView.layoutIfNeeded()
