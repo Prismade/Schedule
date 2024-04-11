@@ -18,8 +18,6 @@
 		2424F1DB244F958400C1D91C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2424F1D9244F958400C1D91C /* LaunchScreen.storyboard */; };
 		2424F229244F9A6400C1D91C /* SCopyableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424F228244F9A6400C1D91C /* SCopyableLabel.swift */; };
 		2424F22F244F9EBB00C1D91C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2424F231244F9EBB00C1D91C /* Localizable.strings */; };
-		2424F234244FA14800C1D91C /* CalendarColors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2424F233244FA14800C1D91C /* CalendarColors.xcassets */; };
-		242D29A0246CAC4600CBF87D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 242D299F246CAC4600CBF87D /* Colors.xcassets */; };
 		24335EE4246491BD00801B2A /* SBuildingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24335EDA246491BD00801B2A /* SBuildingData.swift */; };
 		24335EE5246491BD00801B2A /* SCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24335EDB246491BD00801B2A /* SCourse.swift */; };
 		24335EE6246491BD00801B2A /* SCacheItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24335EDC246491BD00801B2A /* SCacheItem.swift */; };
@@ -89,8 +87,6 @@
 		2424F228244F9A6400C1D91C /* SCopyableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCopyableLabel.swift; sourceTree = "<group>"; };
 		2424F230244F9EBB00C1D91C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2424F232244F9EC000C1D91C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		2424F233244FA14800C1D91C /* CalendarColors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CalendarColors.xcassets; sourceTree = "<group>"; };
-		242D299F246CAC4600CBF87D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		24335EDA246491BD00801B2A /* SBuildingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBuildingData.swift; sourceTree = "<group>"; };
 		24335EDB246491BD00801B2A /* SCourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCourse.swift; sourceTree = "<group>"; };
 		24335EDC246491BD00801B2A /* SCacheItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCacheItem.swift; sourceTree = "<group>"; };
@@ -187,7 +183,6 @@
 				2416015D252912A70096EBDC /* AdditionalInfo.storyboard */,
 				2424F1D9244F958400C1D91C /* LaunchScreen.storyboard */,
 				2424F1D7244F958400C1D91C /* Assets.xcassets */,
-				242D299F246CAC4600CBF87D /* Colors.xcassets */,
 				24661CA024814357001AE48C /* Info.plist */,
 				24661C982481400C001AE48C /* InfoPlist.strings */,
 				2424F231244F9EBB00C1D91C /* Localizable.strings */,
@@ -259,7 +254,6 @@
 				2466640624607B840043BA4C /* SScheduleView.xib */,
 				247C40EC2472E6660075EE9D /* SScheduleTableViewCell.xib */,
 				24B1DB05248A88150068D15F /* SSchedulePlaceholderView.xib */,
-				2424F233244FA14800C1D91C /* CalendarColors.xcassets */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -350,11 +344,9 @@
 				2466640724607B840043BA4C /* SScheduleView.xib in Resources */,
 				24661C962481400C001AE48C /* InfoPlist.strings in Resources */,
 				243B61B4245B581000FD7455 /* SWeekView.xib in Resources */,
-				242D29A0246CAC4600CBF87D /* Colors.xcassets in Resources */,
 				24BF4B58245B35BE0048D6A5 /* SDayView.xib in Resources */,
 				246663FD246073D30043BA4C /* SCalendarView.xib in Resources */,
 				24B1DB06248A88150068D15F /* SSchedulePlaceholderView.xib in Resources */,
-				2424F234244FA14800C1D91C /* CalendarColors.xcassets in Resources */,
 				2416016F2529147A0096EBDC /* UserSetup.storyboard in Resources */,
 				2424F1DB244F958400C1D91C /* LaunchScreen.storyboard in Resources */,
 				2416015F252912A70096EBDC /* AdditionalInfo.storyboard in Resources */,
