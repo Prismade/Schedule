@@ -24,6 +24,7 @@ final class ExamsTableViewController: UITableViewController {
     tableView.register(UINib(nibName: "SScheduleTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
     refreshControl = UIRefreshControl()
     refreshControl?.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
+    tableView.allowsSelection = false
   }
 
   override func viewDidAppear(_ animated: Bool) {
