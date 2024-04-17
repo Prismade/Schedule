@@ -221,6 +221,7 @@ final class StudentScheduleViewController: UIViewController {
     }
     viewController.classData = scheduleSource.classData(number: lastSelectedClass.number, on: lastSelectedClass.day)
     viewController.userKind = .student
+    present(viewController, animated: true)
   }
 }
 
