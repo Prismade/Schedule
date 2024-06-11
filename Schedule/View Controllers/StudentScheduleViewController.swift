@@ -213,15 +213,10 @@ final class StudentScheduleViewController: UIViewController {
   }
 
   private func openClassDetails() {
-    guard
-      let viewController = UIStoryboard(name: "AdditionalInfo", bundle: .main).instantiateInitialViewController() as? SClassDetailsViewController,
-      let lastSelectedClass = lastSelectedClass
-    else {
-      return
-    }
-    viewController.classData = scheduleSource.classData(number: lastSelectedClass.number, on: lastSelectedClass.day)
-    viewController.userKind = .student
-    present(viewController, animated: true)
+    guard let lastSelectedClass, let classData = scheduleSource.classData(number: lastSelectedClass.number, on: lastSelectedClass.day) else { return }
+    let viewController = ClassDetailsViewController(classData: classData)
+    let navigationController = UINavigationController(rootViewController: viewController)
+    present(navigationController, animated: true)
   }
 }
 
