@@ -35,6 +35,54 @@
         }
       }
     },
+    "choose-course" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose course"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите курс"
+          }
+        }
+      }
+    },
+    "choose-division" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose division"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите институт/факультет"
+          }
+        }
+      }
+    },
+    "choose-group" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose group"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите группу"
+          }
+        }
+      }
+    },
     "choose-user" : {
       "extractionState" : "manual",
       "localizations" : {

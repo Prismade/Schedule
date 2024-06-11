@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2416016F2529147A0096EBDC /* UserSetup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2416016D2529147A0096EBDC /* UserSetup.storyboard */; };
 		2424F1CF244F958000C1D91C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424F1CE244F958000C1D91C /* AppDelegate.swift */; };
 		2424F1D1244F958000C1D91C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424F1D0244F958000C1D91C /* SceneDelegate.swift */; };
 		2424F1D8244F958400C1D91C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2424F1D7244F958400C1D91C /* Assets.xcassets */; };
@@ -62,9 +61,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2416016E2529147A0096EBDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/UserSetup.storyboard; sourceTree = "<group>"; };
-		241601E6252923020096EBDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UserSetup.strings; sourceTree = "<group>"; };
-		241601E8252923310096EBDC /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/UserSetup.strings; sourceTree = "<group>"; };
 		2424F1CB244F958000C1D91C /* Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2424F1CE244F958000C1D91C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2424F1D0244F958000C1D91C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,7 +158,6 @@
 				24612115292E22F9009B2F6C /* Utils */,
 				2424F1CE244F958000C1D91C /* AppDelegate.swift */,
 				2424F1D0244F958000C1D91C /* SceneDelegate.swift */,
-				2416016D2529147A0096EBDC /* UserSetup.storyboard */,
 				2424F1D7244F958400C1D91C /* Assets.xcassets */,
 				245063612BC851C5007CB6A6 /* InfoPlist.xcstrings */,
 				2450635F2BC84F24007CB6A6 /* Localizable.xcstrings */,
@@ -330,7 +325,6 @@
 				24BF4B58245B35BE0048D6A5 /* SDayView.xib in Resources */,
 				246663FD246073D30043BA4C /* SCalendarView.xib in Resources */,
 				24B1DB06248A88150068D15F /* SSchedulePlaceholderView.xib in Resources */,
-				2416016F2529147A0096EBDC /* UserSetup.storyboard in Resources */,
 				245063602BC84F24007CB6A6 /* Localizable.xcstrings in Resources */,
 				247C40ED2472E6670075EE9D /* SScheduleTableViewCell.xib in Resources */,
 				2424F1D8244F958400C1D91C /* Assets.xcassets in Resources */,
@@ -391,16 +385,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2416016D2529147A0096EBDC /* UserSetup.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2416016E2529147A0096EBDC /* Base */,
-				241601E6252923020096EBDC /* en */,
-				241601E8252923310096EBDC /* ru */,
-			);
-			name = UserSetup.storyboard;
-			sourceTree = "<group>";
-		};
 		246663FF246073D30043BA4C /* SCalendarView.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

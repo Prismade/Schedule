@@ -9,9 +9,10 @@
 import UIKit
 
 final class SGroupSelectionTableViewController: SSearchableTableViewController {
-  @IBOutlet weak var cancelButton: UIBarButtonItem!
+  private lazy var cancelButton = UIBarButtonItem(title: NSLocalizedString("cancel", comment: ""), style: .plain, target: self, action: #selector(onFinishButtonTap))
 
-  @IBAction func onFinishButtonTap(_ sender: UIBarButtonItem) {
+  @objc
+  private func onFinishButtonTap() {
     navigationController?.dismiss(animated: true) {
       NotificationCenter.default.post(name: Notification.Name("StudentSetupModalDismiss"), object: nil, userInfo: nil)
     }
@@ -27,6 +28,9 @@ final class SGroupSelectionTableViewController: SSearchableTableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     reuseIdentifier = "DivisionTableCell"
+
+    title = NSLocalizedString("choose-group", comment: "")
+    navigationItem.rightBarButtonItem = cancelButton
 
     if !needCancelButton {
       cancelButton.isEnabled = false

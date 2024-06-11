@@ -9,9 +9,10 @@
 import UIKit
 
 final class SDivisionSelectionTableViewController: SSearchableTableViewController {
-  @IBOutlet weak var cancelButton: UIBarButtonItem!
+  private lazy var cancelButton = UIBarButtonItem(title: NSLocalizedString("cancel", comment: ""), style: .plain, target: self, action: #selector(onCancelButtonTap))
 
-  @IBAction func onCancelButtonTap(_ sender: UIBarButtonItem) {
+  @objc
+  private func onCancelButtonTap() {
     navigationController?.dismiss(animated: true) {
       NotificationCenter.default.post(name: Notification.Name("UserSetupModalDismiss"), object: nil, userInfo: nil)
     }
@@ -24,6 +25,10 @@ final class SDivisionSelectionTableViewController: SSearchableTableViewControlle
 
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    title = NSLocalizedString("choose-division", comment: "")
+
+    navigationItem.rightBarButtonItem = cancelButton
 
     reuseIdentifier = "DivisionTableCell"
 
@@ -90,14 +95,6 @@ final class SDivisionSelectionTableViewController: SSearchableTableViewControlle
     return NSCompoundPredicate(orPredicateWithSubpredicates: searchItemsPredicate)
   }
 
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier ?? "" == "ToCourseSelection" {
-      let destination = segue.destination as! SCourseSelectionTableViewController
-      destination.division = selectedDivision
-      destination.needCancelButton = needCancelButton
-    }
-  }
-
   // MARK: - UITableViewDataSource
 
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -116,6 +113,9 @@ final class SDivisionSelectionTableViewController: SSearchableTableViewControlle
     } else {
       selectedDivision = data[indexPath.row].id
     }
-    performSegue(withIdentifier: "ToCourseSelection", sender: self)
+    let viewController = SCourseSelectionTableViewController(style: .plain)
+    viewController.division = selectedDivision
+    viewController.needCancelButton = needCancelButton
+    navigationController?.pushViewController(viewController, animated: true)
   }
 }

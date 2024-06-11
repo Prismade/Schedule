@@ -146,8 +146,9 @@ final class StudentScheduleViewController: UIViewController {
 
   @objc
   private func setupUserButtonTapped(_ sender: UIBarButtonItem) {
-    guard let viewController = UIStoryboard(name: "UserSetup", bundle: .main).instantiateInitialViewController() else { return }
-    present(viewController, animated: true)
+    let viewController = SDivisionSelectionTableViewController(style: .plain)
+    let navigationController = UINavigationController(rootViewController: viewController)
+    present(navigationController, animated: true)
   }
 
   @objc

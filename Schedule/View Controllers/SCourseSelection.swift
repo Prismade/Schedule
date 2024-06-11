@@ -9,9 +9,10 @@
 import UIKit
 
 final class SCourseSelectionTableViewController: UITableViewController {
-  @IBOutlet weak var cancelButton: UIBarButtonItem!
+  private lazy var cancelButton = UIBarButtonItem(title: NSLocalizedString("cancel", comment: ""), style: .plain, target: self, action: #selector(onCancelButtonTap))
 
-  @IBAction func onCancelButtonTap(_ sender: UIBarButtonItem) {
+  @objc
+  private func onCancelButtonTap() {
     navigationController?.dismiss(animated: true) {
       NotificationCenter.default.post(name: Notification.Name("UserSetupModalDismiss"), object: nil, userInfo: nil)
     }
@@ -25,6 +26,9 @@ final class SCourseSelectionTableViewController: UITableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    title = NSLocalizedString("choose-course", comment: "")
+    navigationItem.rightBarButtonItem = cancelButton
 
     refreshControl = UIRefreshControl()
     refreshControl?.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
@@ -59,15 +63,6 @@ final class SCourseSelectionTableViewController: UITableViewController {
     }
   }
 
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier ?? "" == "ToGroupSelection" {
-      let destination = segue.destination as! SGroupSelectionTableViewController
-      destination.division = division
-      destination.course = selectedCourse
-      destination.needCancelButton = needCancelButton
-    }
-  }
-
   // MARK: - UITableViewDataSource
 
   override func numberOfSections(in tableView: UITableView) -> Int {
@@ -92,6 +87,10 @@ final class SCourseSelectionTableViewController: UITableViewController {
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     selectedCourse = data[indexPath.row].course
-    performSegue(withIdentifier: "ToGroupSelection", sender: self)
+    let viewController = SGroupSelectionTableViewController(style: .plain)
+    viewController.division = division
+    viewController.course = selectedCourse
+    viewController.needCancelButton = needCancelButton
+    navigationController?.pushViewController(viewController, animated: true)
   }
 }
