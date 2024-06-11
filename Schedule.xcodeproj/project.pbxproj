@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2416015F252912A70096EBDC /* AdditionalInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2416015D252912A70096EBDC /* AdditionalInfo.storyboard */; };
 		2416016F2529147A0096EBDC /* UserSetup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2416016D2529147A0096EBDC /* UserSetup.storyboard */; };
 		2424F1CF244F958000C1D91C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424F1CE244F958000C1D91C /* AppDelegate.swift */; };
 		2424F1D1244F958000C1D91C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424F1D0244F958000C1D91C /* SceneDelegate.swift */; };
 		2424F1D8244F958400C1D91C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2424F1D7244F958400C1D91C /* Assets.xcassets */; };
-		2424F229244F9A6400C1D91C /* SCopyableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424F228244F9A6400C1D91C /* SCopyableLabel.swift */; };
 		24335EE4246491BD00801B2A /* SBuildingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24335EDA246491BD00801B2A /* SBuildingData.swift */; };
 		24335EE5246491BD00801B2A /* SCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24335EDB246491BD00801B2A /* SCourse.swift */; };
 		24335EE6246491BD00801B2A /* SCacheItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24335EDC246491BD00801B2A /* SCacheItem.swift */; };
@@ -30,8 +28,7 @@
 		245063642BC85371007CB6A6 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245063632BC85371007CB6A6 /* MainTabBarController.swift */; };
 		24567A5F24787EDB004BAD60 /* ClassDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24567A5E24787EDB004BAD60 /* ClassDetailsViewController.swift */; };
 		24567A6124788054004BAD60 /* SBuildingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24567A6024788054004BAD60 /* SBuildingsManager.swift */; };
-		24567A632478866B004BAD60 /* STeacherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24567A622478866B004BAD60 /* STeacherDetailsViewController.swift */; };
-		24567A652478889C004BAD60 /* SEmployeeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24567A642478889C004BAD60 /* SEmployeeManager.swift */; };
+		24567A632478866B004BAD60 /* EmployeeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24567A622478866B004BAD60 /* EmployeeDetailsViewController.swift */; };
 		245E167B24536FE10078DAC4 /* StudentScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245E167A24536FE10078DAC4 /* StudentScheduleViewController.swift */; };
 		24612117292E230B009B2F6C /* UIColor+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24612116292E230B009B2F6C /* UIColor+Convenience.swift */; };
 		24661C7F247E7DBD001AE48C /* SCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24661C7E247E7DBD001AE48C /* SCacheManager.swift */; };
@@ -47,9 +44,12 @@
 		247492FA248E6A8100B4A847 /* SScheduleDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247492F9248E6A8100B4A847 /* SScheduleDay.swift */; };
 		247654E7246982E0003885D5 /* SScheduleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247654E6246982E0003885D5 /* SScheduleData.swift */; };
 		247C40ED2472E6670075EE9D /* SScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247C40EC2472E6660075EE9D /* SScheduleTableViewCell.xib */; };
+		2481B6142C183C1C00605E54 /* EmployeeDetailsTextBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481B6132C183C1C00605E54 /* EmployeeDetailsTextBuilder.swift */; };
+		2481B6162C189F4700605E54 /* EmployeeDataScraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481B6152C189F4700605E54 /* EmployeeDataScraper.swift */; };
 		2489CFF72C179955004BF68F /* ClassDetailsTextBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2489CFF62C179955004BF68F /* ClassDetailsTextBuilder.swift */; };
 		24A38BCC292A0E4000E1B304 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 24A38BCB292A0E4000E1B304 /* SwiftSoup */; };
 		24A38BD8292A12C000E1B304 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 24A38BD7292A12C000E1B304 /* SwiftyJSON */; };
+		24ADD5072BECDD7C0094B5AD /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADD5062BECDD7C0094B5AD /* DTO.swift */; };
 		24B0BD08247BF36C0000ED47 /* SDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B0BD07247BF36C0000ED47 /* SDefaults.swift */; };
 		24B1DB04248A87E30068D15F /* SSchedulePlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B1DB03248A87E30068D15F /* SSchedulePlaceholderView.swift */; };
 		24B1DB06248A88150068D15F /* SSchedulePlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B1DB05248A88150068D15F /* SSchedulePlaceholderView.xib */; };
@@ -62,17 +62,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2416015E252912A70096EBDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AdditionalInfo.storyboard; sourceTree = "<group>"; };
 		2416016E2529147A0096EBDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/UserSetup.storyboard; sourceTree = "<group>"; };
 		241601E6252923020096EBDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UserSetup.strings; sourceTree = "<group>"; };
 		241601E8252923310096EBDC /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/UserSetup.strings; sourceTree = "<group>"; };
-		241601F7252926CC0096EBDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AdditionalInfo.strings; sourceTree = "<group>"; };
-		241601F9252926FB0096EBDC /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/AdditionalInfo.strings; sourceTree = "<group>"; };
 		2424F1CB244F958000C1D91C /* Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2424F1CE244F958000C1D91C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2424F1D0244F958000C1D91C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2424F1D7244F958400C1D91C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2424F228244F9A6400C1D91C /* SCopyableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCopyableLabel.swift; sourceTree = "<group>"; };
 		24335EDA246491BD00801B2A /* SBuildingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBuildingData.swift; sourceTree = "<group>"; };
 		24335EDB246491BD00801B2A /* SCourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCourse.swift; sourceTree = "<group>"; };
 		24335EDC246491BD00801B2A /* SCacheItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCacheItem.swift; sourceTree = "<group>"; };
@@ -90,8 +86,7 @@
 		245063632BC85371007CB6A6 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		24567A5E24787EDB004BAD60 /* ClassDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDetailsViewController.swift; sourceTree = "<group>"; };
 		24567A6024788054004BAD60 /* SBuildingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBuildingsManager.swift; sourceTree = "<group>"; };
-		24567A622478866B004BAD60 /* STeacherDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STeacherDetailsViewController.swift; sourceTree = "<group>"; };
-		24567A642478889C004BAD60 /* SEmployeeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SEmployeeManager.swift; sourceTree = "<group>"; };
+		24567A622478866B004BAD60 /* EmployeeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsViewController.swift; sourceTree = "<group>"; };
 		245E167A24536FE10078DAC4 /* StudentScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentScheduleViewController.swift; sourceTree = "<group>"; };
 		24612116292E230B009B2F6C /* UIColor+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Convenience.swift"; sourceTree = "<group>"; };
 		24661C7E247E7DBD001AE48C /* SCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCacheManager.swift; sourceTree = "<group>"; };
@@ -110,7 +105,10 @@
 		247492F9248E6A8100B4A847 /* SScheduleDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SScheduleDay.swift; sourceTree = "<group>"; };
 		247654E6246982E0003885D5 /* SScheduleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SScheduleData.swift; sourceTree = "<group>"; };
 		247C40EC2472E6660075EE9D /* SScheduleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SScheduleTableViewCell.xib; sourceTree = "<group>"; };
+		2481B6132C183C1C00605E54 /* EmployeeDetailsTextBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsTextBuilder.swift; sourceTree = "<group>"; };
+		2481B6152C189F4700605E54 /* EmployeeDataScraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDataScraper.swift; sourceTree = "<group>"; };
 		2489CFF62C179955004BF68F /* ClassDetailsTextBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDetailsTextBuilder.swift; sourceTree = "<group>"; };
+		24ADD5062BECDD7C0094B5AD /* DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTO.swift; sourceTree = "<group>"; };
 		24B0BD07247BF36C0000ED47 /* SDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDefaults.swift; sourceTree = "<group>"; };
 		24B1DB03248A87E30068D15F /* SSchedulePlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSchedulePlaceholderView.swift; sourceTree = "<group>"; };
 		24B1DB05248A88150068D15F /* SSchedulePlaceholderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSchedulePlaceholderView.xib; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 				2424F1CE244F958000C1D91C /* AppDelegate.swift */,
 				2424F1D0244F958000C1D91C /* SceneDelegate.swift */,
 				2416016D2529147A0096EBDC /* UserSetup.storyboard */,
-				2416015D252912A70096EBDC /* AdditionalInfo.storyboard */,
 				2424F1D7244F958400C1D91C /* Assets.xcassets */,
 				245063612BC851C5007CB6A6 /* InfoPlist.xcstrings */,
 				2450635F2BC84F24007CB6A6 /* Localizable.xcstrings */,
@@ -185,7 +182,7 @@
 				24661C82247EC3C6001AE48C /* SCourseSelection.swift */,
 				24661C84247EC3D9001AE48C /* SGroupSelection.swift */,
 				24567A5E24787EDB004BAD60 /* ClassDetailsViewController.swift */,
-				24567A622478866B004BAD60 /* STeacherDetailsViewController.swift */,
+				24567A622478866B004BAD60 /* EmployeeDetailsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -199,7 +196,6 @@
 				24B0BD07247BF36C0000ED47 /* SDefaults.swift */,
 				24E7FE90245C872E000CDA9E /* STimeManager.swift */,
 				24567A6024788054004BAD60 /* SBuildingsManager.swift */,
-				24567A642478889C004BAD60 /* SEmployeeManager.swift */,
 				24661C7E247E7DBD001AE48C /* SCacheManager.swift */,
 				24661C8E2481271E001AE48C /* SExportManager.swift */,
 			);
@@ -219,6 +215,7 @@
 				24335EDA246491BD00801B2A /* SBuildingData.swift */,
 				247654E6246982E0003885D5 /* SScheduleData.swift */,
 				24335EDC246491BD00801B2A /* SCacheItem.swift */,
+				24ADD5062BECDD7C0094B5AD /* DTO.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -226,7 +223,6 @@
 		2424F227244F9A3D00C1D91C /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				2424F228244F9A6400C1D91C /* SCopyableLabel.swift */,
 				24BF4B59245B378A0048D6A5 /* SDayView.swift */,
 				243B61B5245B599200FD7455 /* SWeekView.swift */,
 				243B61B9245B71E900FD7455 /* SCalendarView.swift */,
@@ -248,6 +244,8 @@
 			children = (
 				24612116292E230B009B2F6C /* UIColor+Convenience.swift */,
 				2489CFF62C179955004BF68F /* ClassDetailsTextBuilder.swift */,
+				2481B6132C183C1C00605E54 /* EmployeeDetailsTextBuilder.swift */,
+				2481B6152C189F4700605E54 /* EmployeeDataScraper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -333,7 +331,6 @@
 				246663FD246073D30043BA4C /* SCalendarView.xib in Resources */,
 				24B1DB06248A88150068D15F /* SSchedulePlaceholderView.xib in Resources */,
 				2416016F2529147A0096EBDC /* UserSetup.storyboard in Resources */,
-				2416015F252912A70096EBDC /* AdditionalInfo.storyboard in Resources */,
 				245063602BC84F24007CB6A6 /* Localizable.xcstrings in Resources */,
 				247C40ED2472E6670075EE9D /* SScheduleTableViewCell.xib in Resources */,
 				2424F1D8244F958400C1D91C /* Assets.xcassets in Resources */,
@@ -354,18 +351,19 @@
 				24661C83247EC3C6001AE48C /* SCourseSelection.swift in Sources */,
 				24335EEA246491BD00801B2A /* SGroup.swift in Sources */,
 				24661C7F247E7DBD001AE48C /* SCacheManager.swift in Sources */,
+				24ADD5072BECDD7C0094B5AD /* DTO.swift in Sources */,
 				24CC4C4D2924D3F70041910C /* NetworkWorker.swift in Sources */,
+				2481B6162C189F4700605E54 /* EmployeeDataScraper.swift in Sources */,
 				24661C8A247EC3D9001AE48C /* SSearchableTableViewController.swift in Sources */,
 				24335EEB246491BD00801B2A /* SDivision.swift in Sources */,
 				24335EE5246491BD00801B2A /* SCourse.swift in Sources */,
 				2424F1CF244F958000C1D91C /* AppDelegate.swift in Sources */,
 				247492FA248E6A8100B4A847 /* SScheduleDay.swift in Sources */,
-				2424F229244F9A6400C1D91C /* SCopyableLabel.swift in Sources */,
 				24E7FE91245C872E000CDA9E /* STimeManager.swift in Sources */,
 				24661C8F2481271E001AE48C /* SExportManager.swift in Sources */,
 				24567A5F24787EDB004BAD60 /* ClassDetailsViewController.swift in Sources */,
 				24335EF12464A69200801B2A /* SScheduleTableViewCell.swift in Sources */,
-				24567A632478866B004BAD60 /* STeacherDetailsViewController.swift in Sources */,
+				24567A632478866B004BAD60 /* EmployeeDetailsViewController.swift in Sources */,
 				24B1DB04248A87E30068D15F /* SSchedulePlaceholderView.swift in Sources */,
 				24B0BD08247BF36C0000ED47 /* SDefaults.swift in Sources */,
 				243B61B6245B599200FD7455 /* SWeekView.swift in Sources */,
@@ -374,6 +372,7 @@
 				24661C81247EBECA001AE48C /* ExamsTableViewController.swift in Sources */,
 				24335EE6246491BD00801B2A /* SCacheItem.swift in Sources */,
 				24B8DDAF292424C900824EF2 /* Endpoint.swift in Sources */,
+				2481B6142C183C1C00605E54 /* EmployeeDetailsTextBuilder.swift in Sources */,
 				245E167B24536FE10078DAC4 /* StudentScheduleViewController.swift in Sources */,
 				2424F1D1244F958000C1D91C /* SceneDelegate.swift in Sources */,
 				24661C89247EC3D9001AE48C /* SGroupSelection.swift in Sources */,
@@ -386,23 +385,12 @@
 				2466640524607B740043BA4C /* SScheduleView.swift in Sources */,
 				24335EE8246491BD00801B2A /* SEmployee.swift in Sources */,
 				24335EE4246491BD00801B2A /* SBuildingData.swift in Sources */,
-				24567A652478889C004BAD60 /* SEmployeeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2416015D252912A70096EBDC /* AdditionalInfo.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2416015E252912A70096EBDC /* Base */,
-				241601F7252926CC0096EBDC /* en */,
-				241601F9252926FB0096EBDC /* ru */,
-			);
-			name = AdditionalInfo.storyboard;
-			sourceTree = "<group>";
-		};
 		2416016D2529147A0096EBDC /* UserSetup.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

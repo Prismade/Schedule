@@ -69,6 +69,22 @@
         }
       }
     },
+    "contacts" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contacts: "
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Контакты: "
+          }
+        }
+      }
+    },
     "degree" : {
       "localizations" : {
         "en" : {
@@ -181,22 +197,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "НЕТ ПАР"
-          }
-        }
-      }
-    },
-    "no-contacts" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No contacts"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Нет контактов"
           }
         }
       }

@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-final class ClassDetailsViewController: UIViewController, UITextViewDelegate {
+final class ClassDetailsViewController: UIViewController {
   private let classData: SClass
   private let textBuilder = ClassDetailsTextBuilder()
 
@@ -79,14 +79,12 @@ final class ClassDetailsViewController: UIViewController, UITextViewDelegate {
   private func handleCloseItemTap() {
     dismiss(animated: true)
   }
+}
 
-  // MARK: - UITextViewDelegate
-
+extension ClassDetailsViewController: UITextViewDelegate {
   func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange) -> Bool {
-    guard URL.absoluteString == "teacher-details", let viewController = UIStoryboard(name: "AdditionalInfo", bundle: .main).instantiateInitialViewController() as? STeacherDetailsViewController else {
-      return false
-    }
-    viewController.employeeId = classData.employeeId
+    guard URL.absoluteString == "teacher-details", let employeeID = classData.employeeId else { return false }
+    let viewController = EmployeeDetailsViewController(employeeID: employeeID)
     let navigationController = UINavigationController(rootViewController: viewController)
     present(navigationController, animated: true)
     return false
