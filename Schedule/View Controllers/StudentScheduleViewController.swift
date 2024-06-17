@@ -31,10 +31,28 @@ final class StudentScheduleViewController: UIViewController {
     view.translatesAutoresizingMaskIntoConstraints = false
     return view
   }()
+  private lazy var groupButton: UIButton = {
+    var configuration = UIButton.Configuration.filled()
+    configuration.title = NSLocalizedString("group", comment: "")
+    configuration.image = UIImage(systemName: "chevron.right")?.applyingSymbolConfiguration(.init(scale: .small))
+    configuration.imagePlacement = .trailing
+    configuration.cornerStyle = .capsule
+    configuration.imagePadding = 8.0
+    let button = UIButton(configuration: configuration)
+    button.addTarget(self, action: #selector(handleGroupButtonTap(_:)), for: .touchUpInside)
+    return button
+  }()
 
   private var lastSelectedClass: SelectedClass? = nil
   private lazy var calendarSelectionViewController = UINavigationController()
   private let scheduleSource = SScheduleData(for: .student)
+
+  @objc
+  private func handleGroupButtonTap(_ sender: UIButton) {
+    let viewController = SDivisionSelectionTableViewController(style: .plain)
+    let navigationController = UINavigationController(rootViewController: viewController)
+    present(navigationController, animated: true)
+  }
 
   override func loadView() {
     view = UIView()
@@ -68,11 +86,7 @@ final class StudentScheduleViewController: UIViewController {
       style: .plain,
       target: self,
       action: #selector(calendarExportButtonTapped(_:)))
-    navigationItem.rightBarButtonItem = UIBarButtonItem(
-      image: UIImage(systemName: "gear"),
-      style: .plain,
-      target: self,
-      action: #selector(setupUserButtonTapped(_:)))
+    navigationItem.titleView = groupButton
   }
 
   override func viewDidLoad() {
@@ -81,7 +95,7 @@ final class StudentScheduleViewController: UIViewController {
     NotificationCenter.default.addObserver(self, selector: #selector(onModalDismiss(_:)), name: Notification.Name("StudentSetupModalDismiss"), object: nil)
 
     scheduleSource.userId = SDefaults.studentId
-    navigationItem.title = SDefaults.studentName
+    groupButton.configuration?.title = SDefaults.studentName
     scheduleSource.didFinishDataUpdate = { error in
       if let err = error {
         debugPrint(err.localizedDescription)
@@ -145,13 +159,6 @@ final class StudentScheduleViewController: UIViewController {
   }
 
   @objc
-  private func setupUserButtonTapped(_ sender: UIBarButtonItem) {
-    let viewController = SDivisionSelectionTableViewController(style: .plain)
-    let navigationController = UINavigationController(rootViewController: viewController)
-    present(navigationController, animated: true)
-  }
-
-  @objc
   private func calendarExportButtonTapped(_ sender: UIBarButtonItem) {
     switch SExportManager.shared.authStatus {
     case .notDetermined:
@@ -181,7 +188,7 @@ final class StudentScheduleViewController: UIViewController {
       SDefaults.studentId = ((result as! [String : Any])["UserId"] as! Int)
       SDefaults.studentName = ((result as! [String : Any])["UserName"] as! String)
       scheduleSource.userId = SDefaults.studentId
-      navigationItem.title = SDefaults.studentName
+      groupButton.configuration?.title = SDefaults.studentName
       placeholder.isHidden = true
       updateSchedule()
     }

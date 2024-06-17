@@ -48,7 +48,6 @@
 		2489CFF72C179955004BF68F /* ClassDetailsTextBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2489CFF62C179955004BF68F /* ClassDetailsTextBuilder.swift */; };
 		24A38BCC292A0E4000E1B304 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 24A38BCB292A0E4000E1B304 /* SwiftSoup */; };
 		24A38BD8292A12C000E1B304 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 24A38BD7292A12C000E1B304 /* SwiftyJSON */; };
-		24ADD5072BECDD7C0094B5AD /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADD5062BECDD7C0094B5AD /* DTO.swift */; };
 		24B0BD08247BF36C0000ED47 /* SDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B0BD07247BF36C0000ED47 /* SDefaults.swift */; };
 		24B1DB04248A87E30068D15F /* SSchedulePlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B1DB03248A87E30068D15F /* SSchedulePlaceholderView.swift */; };
 		24B1DB06248A88150068D15F /* SSchedulePlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B1DB05248A88150068D15F /* SSchedulePlaceholderView.xib */; };
@@ -104,7 +103,6 @@
 		2481B6132C183C1C00605E54 /* EmployeeDetailsTextBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsTextBuilder.swift; sourceTree = "<group>"; };
 		2481B6152C189F4700605E54 /* EmployeeDataScraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDataScraper.swift; sourceTree = "<group>"; };
 		2489CFF62C179955004BF68F /* ClassDetailsTextBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDetailsTextBuilder.swift; sourceTree = "<group>"; };
-		24ADD5062BECDD7C0094B5AD /* DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTO.swift; sourceTree = "<group>"; };
 		24B0BD07247BF36C0000ED47 /* SDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDefaults.swift; sourceTree = "<group>"; };
 		24B1DB03248A87E30068D15F /* SSchedulePlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSchedulePlaceholderView.swift; sourceTree = "<group>"; };
 		24B1DB05248A88150068D15F /* SSchedulePlaceholderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SSchedulePlaceholderView.xib; sourceTree = "<group>"; };
@@ -210,7 +208,6 @@
 				24335EDA246491BD00801B2A /* SBuildingData.swift */,
 				247654E6246982E0003885D5 /* SScheduleData.swift */,
 				24335EDC246491BD00801B2A /* SCacheItem.swift */,
-				24ADD5062BECDD7C0094B5AD /* DTO.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -345,7 +342,6 @@
 				24661C83247EC3C6001AE48C /* SCourseSelection.swift in Sources */,
 				24335EEA246491BD00801B2A /* SGroup.swift in Sources */,
 				24661C7F247E7DBD001AE48C /* SCacheManager.swift in Sources */,
-				24ADD5072BECDD7C0094B5AD /* DTO.swift in Sources */,
 				24CC4C4D2924D3F70041910C /* NetworkWorker.swift in Sources */,
 				2481B6162C189F4700605E54 /* EmployeeDataScraper.swift in Sources */,
 				24661C8A247EC3D9001AE48C /* SSearchableTableViewController.swift in Sources */,
